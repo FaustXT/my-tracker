@@ -102,7 +102,7 @@ class __TwigTemplate_a5174f35c30ec91f36fb65daa5f89b3ea68d94edc2e698e3f59fa50b11f
       <div class=\"w3-col\" style=\"width:50px\"><i class=\"w3-xxlarge \tfa fa-file-image-o\"></i></div>
  <label>Put Image here</label>
    <div class=\"w3-rest\">
-     <input class=\"w3-input w3-border\" name=\"photo\" type=\"file\">
+     <input class=\"w3-input w3-border\" name=\"photo\" type=\"file\" >
    </div>
  </div>
  <!--////////////////////////////// Submit button ///////// -->
@@ -198,7 +198,7 @@ class __TwigTemplate_a5174f35c30ec91f36fb65daa5f89b3ea68d94edc2e698e3f59fa50b11f
       <div class=\"w3-col\" style=\"width:50px\"><i class=\"w3-xxlarge \tfa fa-file-image-o\"></i></div>
  <label>Put Image here</label>
    <div class=\"w3-rest\">
-     <input class=\"w3-input w3-border\" name=\"photo\" type=\"file\">
+     <input class=\"w3-input w3-border\" name=\"photo\" type=\"file\" >
    </div>
  </div>
  <!--////////////////////////////// Submit button ///////// -->
@@ -210,6 +210,6 @@ class __TwigTemplate_a5174f35c30ec91f36fb65daa5f89b3ea68d94edc2e698e3f59fa50b11f
 {% endif %}
 </form>
 {% endblock %}
-", "torrentin-form.tpl.php", "C:\\Users\\Faust\\Desktop\\PHP\\tracker_4.1\\app\\views\\torrentin-form.tpl.php");
+", "torrentin-form.tpl.php", "D:\\Git\\my-tracker\\my-tracker\\app\\views\\torrentin-form.tpl.php");
     }
 }

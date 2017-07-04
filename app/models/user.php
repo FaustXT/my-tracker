@@ -23,6 +23,7 @@ $this->email    = $email;
 $this->id       =$id;
 $this->role  = "User";
 $this->avatar = $avatar;
+$this->block  = false; 
  }
  /// save user to disk/database
 public function save(){

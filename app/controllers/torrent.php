@@ -108,7 +108,7 @@ r("torrent-details", ["id"=>$id, "torrent"=>$torrent]);
 
 }
 ////////////////////////// Delete Torrent ///////////////
-static function SaveObject($id){
+static function delete($id){
   Torrent::delete($id);
  header("Location:?torrent/list");
 }
@@ -124,11 +124,4 @@ static function block($id){
   header("Location:?torrent/list");
   }
 
-///////////////////////// Unblock Torrent ///////////////////
-static function unblock($id){
-  $torrent =  Torrent::GetBID($id);
-  $torrent->block=false;
-  Torrent::save($torrent);
-  header("Location:?torrent/list");
-}
 }

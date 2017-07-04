@@ -58,5 +58,14 @@ class AdminControler {
 
     header('Location:?mytracker/home');
   }
+  static function list(){
+      $users = User::all();
+      r("admin-user-list", ["users"=>$users]);
+  }
+  static function delete(){
 
+  }
+  static function block(){
+
+  }
 }

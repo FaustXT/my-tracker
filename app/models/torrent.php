@@ -28,25 +28,33 @@ $this->block= false;
 
  }
  /////////////////////////////////////////////// save user to disk/database
- public function save(){
- $uuid1 = Uuid::uuid1();
+ public function save($torrent=null){
 
-if($this->id){
-move_uploaded_file($this->file['tmp_name'], "public/torrent/TorrentFiles/$this->id.torrent" );
-$this->file= "public/torrent/TorrentFiles/$this->id.torrent" ;
-  imagejpeg( imagecreatefromjpeg($this->image['tmp_name']), "public/torrent/images/$this->id.jpg");
-$this->image="public/torrent/images/$this->id.jpg";
-$torrent = json_encode( $this );
- file_put_contents( "database/torrent/$this->id.json" , $torrent ) ; //
-}else{
-move_uploaded_file($this->file['tmp_name'], "public/torrent/TorrentFiles/{$uuid1->toString()}.torrent" );
-$this->file= "public/torrent/TorrentFiles/{$uuid1->toString()}.torrent" ;
-  imagejpeg( imagecreatefromjpeg($this->image['tmp_name']), "public/torrent/images/{$uuid1->toString()}.jpg");
-$this->image="public/torrent/images/{$uuid1->toString()}.jpg";
-$this->id=$uuid1->toString();
-$torrent = json_encode( $this );
- file_put_contents( "database/torrent/{$uuid1->toString()}.json" , $torrent ) ; //
+if(!$torrent){
+  if($this->id){
+              move_uploaded_file($this->file['tmp_name'], "public/torrent/TorrentFiles/$this->id.torrent" );
+              $this->file= "public/torrent/TorrentFiles/$this->id.torrent" ;
+              imagejpeg( imagecreatefromjpeg($this->image['tmp_name']), "public/torrent/images/$this->id.jpg");
+              $this->image="public/torrent/images/$this->id.jpg";
+              $torrent = json_encode( $this );
+                file_put_contents( "database/torrent/$this->id.json" , $torrent ) ; //
+  }else{
+    $uuid1 = Uuid::uuid1();
+
+    move_uploaded_file($this->file['tmp_name'], "public/torrent/TorrentFiles/{$uuid1->toString()}.torrent" );
+    $this->file= "public/torrent/TorrentFiles/{$uuid1->toString()}.torrent" ;
+    imagejpeg( imagecreatefromjpeg($this->image['tmp_name']), "public/torrent/images/{$uuid1->toString()}.jpg");
+    $this->image="public/torrent/images/{$uuid1->toString()}.jpg";
+    $this->id=$uuid1->toString();
+    $torrent = json_encode( $this );
+    file_put_contents( "database/torrent/{$uuid1->toString()}.json" , $torrent ) ; //
 }
+ }
+ else{
+   $id=$torrent->id;
+   $torrent = json_encode( $torrent );
+     file_put_contents( "database/torrent/$id.json" , $torrent ) ;
+ }
  }
 
  //////////////////////////////////// Save Object

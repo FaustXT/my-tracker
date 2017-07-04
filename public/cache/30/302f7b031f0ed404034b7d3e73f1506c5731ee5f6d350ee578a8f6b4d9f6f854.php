@@ -16,8 +16,7 @@ class __TwigTemplate_5163c973d3a1b50053d9874bd5dd982d05d8a219cbfd8522d38bc4398b8
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "
-<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">
+        echo "<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">
 \t\t<div class=\"container-fluid\">
 \t\t\t<div class=\"navbar-header\">
 \t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#sidebar-collapse\">
@@ -53,7 +52,7 @@ class __TwigTemplate_5163c973d3a1b50053d9874bd5dd982d05d8a219cbfd8522d38bc4398b8
 \t\t\t<li><a href=\"?user/details\"><svg class=\"glyph stroked male user \"><use xlink:href=\"#stroked-male-user\"/></use></svg> Accaunt About</a></li>
 \t\t\t<li><a href=\"?torrent/create\"><svg class=\"glyph stroked upload\"><use xlink:href=\"#stroked-upload\"/></use></svg> Torrent Upload</a></li>
 \t\t\t<li><a href=\"?torrent/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Torrents</a></li>
-      <li><a href=\"?admin/torrent/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Users</a></li>
+      <li><a href=\"?admin/user/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Users</a></li>
 \t\t\t<li class=\"parent \">
 \t\t\t\t<a href=\"#\">
 \t\t\t\t\t<span data-toggle=\"collapse\" href=\"#sub-item-1\"><svg class=\"glyph stroked chevron-down\"><use xlink:href=\"#stroked-chevron-down\"></use></svg></span> Dropdown
@@ -110,8 +109,7 @@ class __TwigTemplate_5163c973d3a1b50053d9874bd5dd982d05d8a219cbfd8522d38bc4398b8
 
     public function getSourceContext()
     {
-        return new Twig_Source("
-<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">
+        return new Twig_Source("<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">
 \t\t<div class=\"container-fluid\">
 \t\t\t<div class=\"navbar-header\">
 \t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#sidebar-collapse\">
@@ -147,7 +145,7 @@ class __TwigTemplate_5163c973d3a1b50053d9874bd5dd982d05d8a219cbfd8522d38bc4398b8
 \t\t\t<li><a href=\"?user/details\"><svg class=\"glyph stroked male user \"><use xlink:href=\"#stroked-male-user\"/></use></svg> Accaunt About</a></li>
 \t\t\t<li><a href=\"?torrent/create\"><svg class=\"glyph stroked upload\"><use xlink:href=\"#stroked-upload\"/></use></svg> Torrent Upload</a></li>
 \t\t\t<li><a href=\"?torrent/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Torrents</a></li>
-      <li><a href=\"?admin/torrent/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Users</a></li>
+      <li><a href=\"?admin/user/list\"><svg class=\"glyph stroked table\"><use xlink:href=\"#stroked-table\"></use></svg> Users</a></li>
 \t\t\t<li class=\"parent \">
 \t\t\t\t<a href=\"#\">
 \t\t\t\t\t<span data-toggle=\"collapse\" href=\"#sub-item-1\"><svg class=\"glyph stroked chevron-down\"><use xlink:href=\"#stroked-chevron-down\"></use></svg></span> Dropdown
@@ -181,6 +179,6 @@ class __TwigTemplate_5163c973d3a1b50053d9874bd5dd982d05d8a219cbfd8522d38bc4398b8
 \t\t\t\t<li class=\"active\">Icons</li>
 \t\t\t</ol>
 \t\t</div><!--/.row-->
-", "admin-header.tpl.php", "C:\\Users\\Faust\\Desktop\\PHP\\tracker_4\\app\\views\\admin-header.tpl.php");
+", "admin-header.tpl.php", "D:\\Git\\my-tracker\\my-tracker\\app\\views\\admin-header.tpl.php");
     }
 }

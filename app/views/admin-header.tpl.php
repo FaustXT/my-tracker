@@ -34,7 +34,7 @@
 			<li><a href="?user/details"><svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></use></svg> Accaunt About</a></li>
 			<li><a href="?torrent/create"><svg class="glyph stroked upload"><use xlink:href="#stroked-upload"/></use></svg> Torrent Upload</a></li>
 			<li><a href="?torrent/list"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Torrents</a></li>
-      <li><a href="?admin/torrent/list"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Users</a></li>
+      <li><a href="?admin/user/list"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Users</a></li>
 			<li class="parent ">
 				<a href="#">
 					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Dropdown

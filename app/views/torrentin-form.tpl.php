@@ -48,7 +48,7 @@
       <div class="w3-col" style="width:50px"><i class="w3-xxlarge 	fa fa-file-image-o"></i></div>
  <label>Put Image here</label>
    <div class="w3-rest">
-     <input class="w3-input w3-border" name="photo" type="file">
+     <input class="w3-input w3-border" name="photo" type="file" >
    </div>
  </div>
  <!--////////////////////////////// Submit button ///////// -->

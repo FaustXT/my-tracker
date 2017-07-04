@@ -1,14 +1,14 @@
 <?php
 
-/* admin-torrents-list.tpl.php */
-class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f594322 extends Twig_Template
+/* admin-user-list.tpl.php */
+class __TwigTemplate_6c4e974086a6deef01b5307ba174b03ecc31690b63c39d89c4fec8d523163fd6 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("layout-admin.tpl.php", "admin-torrents-list.tpl.php", 1);
+        $this->parent = $this->loadTemplate("layout-admin.tpl.php", "admin-user-list.tpl.php", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -32,7 +32,7 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
 
 ";
         // line 5
-        $this->loadTemplate("admin-header.tpl.php", "admin-torrents-list.tpl.php", 5)->display($context);
+        $this->loadTemplate("admin-header.tpl.php", "admin-user-list.tpl.php", 5)->display($context);
         // line 6
         echo "<div class=\"row\">
 \t\t\t<div class=\"col-lg-12\">
@@ -50,54 +50,41 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
 \t\t\t\t\t\t    <thead>
 \t\t\t\t\t\t    <tr>
 \t\t\t\t\t\t        <th >Name</th>
-\t\t\t\t\t\t        <th  >Type</th>
-\t\t\t\t\t\t        <th >Gen</th>
-                    <th>Administrate</th>
-
+\t\t\t\t\t\t\t\t\t\t<th>Administrate</th>
 \t\t\t\t\t\t    </tr>
                 </thead>
                 ";
-        // line 28
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["torrents"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["torrent"]) {
-            // line 29
+        $context['_seq'] = twig_ensure_traversable(($context["users"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 26
             echo "                <tr>
-                <td><a href=\"?torrent/details/";
-            // line 30
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "id", array()));
+\t\t\t\t\t\t\t\t\t<td> <a href=\"?user/details/";
+            // line 27
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "id", array()));
             echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "name", array()));
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "nikname", array()));
             echo "</a></td>
-                  <td>";
-            // line 31
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "type", array()));
-            echo "</td>
-                  <td>";
-            // line 32
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "gen", array()));
-            echo "</td>
-                  <td><a href=\"?admin/torrent/edit/";
-            // line 33
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "id", array()));
-            echo "\">Edit </a><a href=\"?admin/torrent/block/";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "id", array()));
+\t\t\t\t\t\t\t\t\t<td><td><a href=\"?admin/torrent/block/";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "id", array()));
             echo "\">";
-            if (($this->getAttribute($context["torrent"], "block", array()) == false)) {
+            if (($this->getAttribute(($context["torrent"] ?? null), "block", array()) == false)) {
                 echo "Block ";
             } else {
                 echo " Unblock ";
             }
             echo "</a><a href=\"?admin/torrent/delete/";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["torrent"], "id", array()));
-            echo "\"> Delete </a></td>
-                  </tr>
+            echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "id", array()));
+            echo "\"> Delete </a></td></td>
+\t\t\t\t\t\t\t\t </tr>
                   ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['torrent'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 31
         echo "
 \t\t\t\t\t\t</table>
 \t\t\t\t\t</div>
@@ -168,7 +155,7 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
 
     public function getTemplateName()
     {
-        return "admin-torrents-list.tpl.php";
+        return "admin-user-list.tpl.php";
     }
 
     public function isTraitable()
@@ -178,7 +165,7 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
 
     public function getDebugInfo()
     {
-        return array (  101 => 36,  82 => 33,  78 => 32,  74 => 31,  68 => 30,  65 => 29,  61 => 28,  37 => 6,  35 => 5,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  88 => 31,  71 => 28,  65 => 27,  62 => 26,  58 => 25,  37 => 6,  35 => 5,  31 => 3,  28 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -212,19 +199,14 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
 \t\t\t\t\t\t    <thead>
 \t\t\t\t\t\t    <tr>
 \t\t\t\t\t\t        <th >Name</th>
-\t\t\t\t\t\t        <th  >Type</th>
-\t\t\t\t\t\t        <th >Gen</th>
-                    <th>Administrate</th>
-
+\t\t\t\t\t\t\t\t\t\t<th>Administrate</th>
 \t\t\t\t\t\t    </tr>
                 </thead>
-                {% for torrent in torrents %}
+                {% for user in users %}
                 <tr>
-                <td><a href=\"?torrent/details/{{torrent.id|e}}\">{{ torrent.name|e }}</a></td>
-                  <td>{{ torrent.type|e }}</td>
-                  <td>{{ torrent.gen|e }}</td>
-                  <td><a href=\"?admin/torrent/edit/{{torrent.id|e}}\">Edit </a><a href=\"?admin/torrent/block/{{torrent.id|e}}\">{% if torrent.block ==false %}Block {% else %} Unblock {% endif %}</a><a href=\"?admin/torrent/delete/{{torrent.id|e}}\"> Delete </a></td>
-                  </tr>
+\t\t\t\t\t\t\t\t\t<td> <a href=\"?user/details/{{user.id|e}}\">{{ user.nikname|e }}</a></td>
+\t\t\t\t\t\t\t\t\t<td><td><a href=\"?admin/torrent/block/{{user.id|e}}\">{% if torrent.block ==false %}Block {% else %} Unblock {% endif %}</a><a href=\"?admin/torrent/delete/{{user.id|e}}\"> Delete </a></td></td>
+\t\t\t\t\t\t\t\t </tr>
                   {% endfor %}
 
 \t\t\t\t\t\t</table>
@@ -292,6 +274,6 @@ class __TwigTemplate_65a0abd549a6a0a8e6490b82277ea442512e0e5f9f87e5bf62a600d49f5
   })
 </script>
 {% endblock %}
-", "admin-torrents-list.tpl.php", "D:\\Git\\my-tracker\\my-tracker\\app\\views\\admin-torrents-list.tpl.php");
+", "admin-user-list.tpl.php", "D:\\Git\\my-tracker\\my-tracker\\app\\views\\admin-user-list.tpl.php");
     }
 }

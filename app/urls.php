@@ -3,6 +3,7 @@
 // Router::get("hello", function(){echo "Hello";});
 // Router::get("bye", function(){echo "bye";});
 // Router::get("logout", function(){echo "logout";});
+
 /////////////////// User Controls ///////////////////
 Router::get("mytracker/home", "UserController::index");
 Router::get("user/create", "UserController::create");
@@ -27,6 +28,7 @@ Router::get("game/newgame", "GameControler::newgame");
 
 ///////// Torrents controls /////////////////////
 Router::get("torrent/list", "TorrentController::list");
+
 //Router::get("torrent/create", "TorrentController::create");
 Router::get("torrent/details/%", "TorrentController::details");
 Router::get("torrent/create", ["UserController::CheckLogin", "TorrentController::create"]);
@@ -45,3 +47,4 @@ Router::get("admin/logout", "AdminControler::logout");
 Router::get("admin/torrent/edit/%",  "TorrentController::create");
 Router::get("admin/torrent/block/%", "TorrentController::block");
 Router::get("admin/torrent/delete/%", "TorrentController::delete");
+Router::get("admin/user/list", "AdminControler::list");
